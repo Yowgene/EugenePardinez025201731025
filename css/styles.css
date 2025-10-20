@@ -1,0 +1,107 @@
+/*this css is made with reference to chatgpt and layouts from google*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+h1 {
+    text-align: center;
+    background-color: #1f3c88;
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+}
+
+/* Navigation bar */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #27496d;
+    padding: 10px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Left side: Customer list */
+.table_customers {
+    flex: 1;
+    max-width: 250px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: fit-content;
+}
+
+/* Customer table */
+.table_customers table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_customers td {
+    border-bottom: 1px solid #ccc;
+    padding: 6px;
+}
+
+.table_customers a {
+    text-decoration: none;
+    color: #1f3c88;
+}
+
+.table_customers a:hover {
+    color: #007bff;
+}
+
+/* Right side: Portfolio info */
+.table_info {
+    flex: 3;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Tables inside right section */
+.table_info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table_info th, .table_info td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: left;
+}
+
+.table_info .table-header th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Headings in portfolio */
+.table_info h3 {
+    margin-top: 20px;
+    color: #1f3c88;
+}
+
