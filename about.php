@@ -18,6 +18,6 @@
             <h2><a href="apitest.php">APIs</a></h2>
         </div>
     <h2>About</h2>
-    <p>I am Eugene Pardinez, this assignment is about using php and sqlite to create an interactive html. Im currently using XAMPP, VScode and db browser for the assignment.https://github.com/Yowgene/eugpar025201731025.git</p>
+    <p>I am Eugene Pardinez, this assignment is about using php and sqlite to create an interactive html. Im currently using XAMPP, VScode and db browser for the assignment.<a href="https://github.com/Yowgene/eugpar025201731025.git">https://github.com/Yowgene/eugpar025201731025.git</a></a></p>
     </body>
 </html>

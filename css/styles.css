@@ -105,3 +105,63 @@ h1 {
     color: #1f3c88;
 }
 
+/* Company info section */
+.company_info {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* container for company area */
+.company_info {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+/* company details table */
+.compinfo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+}
+.compinfo th, .compinfo td {
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    text-align: left;
+}
+
+/* history / financials table */
+.financials {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: #fff;
+}
+.financials thead th {
+    background: #1f3c88;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+    position: sticky;      /* optional: keep header visible when scrolling */
+    top: 0;
+}
+.financials td, .financials th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.financials tbody tr:nth-child(even) {
+    background: #f8f9fb;
+}
+.financials tbody tr:hover {
+    background: #eef4ff;
+}

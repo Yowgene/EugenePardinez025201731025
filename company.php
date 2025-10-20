@@ -34,17 +34,33 @@
                 echo "<label for= 'compinfo'><h2>Company Information</h2></label>";
                 echo "<table class = 'compinfo'>";
                 echo "<tr>";
-                echo "<th>Name: " . $companies['name'] . "</th>";
-                echo "<th>Symbol: " . $companies['symbol'] . "</th>";
-                echo "<th>Sector: " . $companies['sector'] . "</th>";
-                echo "<th>subindustry: " . $companies['subindustry'] . "</th>";
-                echo "<th>Address: " . $companies['address'] . "</th>";
-                echo "<th>Exchange: " . $companies['exchange'] . "</th>";
-                echo "<th>Website:<a href='" . $companies['website'] ."'>". $companies['website']. "</th>";
-                echo "description: " . $companies['description'] . "</th>";
+                echo "<th><strong>Name: </strong>" . $companies['name'] . "</th>";
+                echo "<th><strong>Symbol: </strong>" . $companies['symbol'] . "</th>";
+                echo "<th><strong>Sector: </strong>" . $companies['sector'] . "</th>";
+                echo "<th><strong>subindustry: </strong>" . $companies['subindustry'] . "</th>";
+                echo "<th><strong>Address: </strong>" . $companies['address'] . "</th>";
+                echo "<th><strong>Exchange: </strong>" . $companies['exchange'] . "</th>";
+                echo "<th><strong>Website:<a href='" . $companies['website'] ."'></strong>". $companies['website']. "</th>";
+                echo "<strong>Description: </strong>" . $companies['description'] . "</th>";
                 echo "</tr>";
                 echo "</table>";
-                echo "<label for = 'financials'><h2>Financial Information</h2></label>";
+                echo "<label for = 'financials'><h2>History</h2></label>";
+                echo "<table class = 'financials'>";
+                $sql = "SELECT * FROM history WHERE symbol = :comp";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([':comp' => $cmp]);
+                $history = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                echo "<tr>";
+                foreach ($history as $history) {
+                    echo "<th>Date: $" . $history['date'] . "</th>";
+                    echo "<th>Volume: " . $history['volume'] . "</th>";
+                    echo "<th>Open: $" . number_format((float)$history['open'],2) . "</th>";
+                    echo "<th>Close: $" . number_format((float)$history['close'],2) . "</th>";
+                    echo "<th>High: $" . number_format((float)$history['high'],2) . "</th>";
+                    echo "<th>Low: $" . number_format((float)$history['low'],2) . "</th>";
+                    echo "</tr>";
+                }
+                echo "</table>";
                 
         ?>
 

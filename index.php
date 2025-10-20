@@ -81,7 +81,7 @@
                     echo "<tr>";
                     echo "<th>". $totalcompanies . "</th>";
                     echo "<th>". $totalamount . "</th>";
-                    echo "<th>$". $totalcash . "</th>";
+                    echo "<th>$". number_format((float)$totalcash,2) . "</th>";
                     echo "</tr>";
                     echo "</table>";
                 //this is for the details of the companies
@@ -105,14 +105,15 @@
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($result as $row) {
                     echo "<tr>";
+                    //used symbol for both, easier access to company.php
                     echo "<th><a href='company.php?comp=" . $row['symbol'] ."'>" .$row['symbol'] . "</a></th>";
-                    echo "<th><a href='company.php?comp=" .$row['name'] ."'>".$row['name'] . "</th>";
+                    echo "<th><a href='company.php?comp=" .$row['symbol'] ."'>".$row['name'] . "</th>";
                     echo "<th>" .$row['sector'] . "</th>";
                     echo "<th>" .$row['amount'] . "</th>";
-                    echo "<th>$" . $row['total_value'] . "</th>";
+                    echo "<th>$" . number_format((float)$row['total_value'],2) . "</th>";
                     echo "</tr>";
                 }
-
+                $pdo = null; //close the connection
                 }
                 ?>
             </div>
