@@ -1,5 +1,6 @@
 <?php
-
+//apitest.php, this should provide links to the different api files created
+//i'ved put it in a table for better visuals and structure
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,26 @@
     <label for="api">APIs</label>
     <table class="api">
         <tr>
-            <th><a href='api/companies.php?Apple%20Inc.'>api/companies.php</a></th>
+            <th><strong>URL</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        <tr>
+            <th><a href='api/companies.php?ref=AAP'>api/companies.php?gref=AAP</a></th>
+            <th>Should return AAP</th>
+        </tr>
+        <tr>
+            <th><a href='api/companies.php'>api/companies</a></th>
+            <th>Should return all companies</th>
+        </tr>
+        <tr>
+            <th><a href='api/portfolio.php?ref=1'>api/portfolio.php?ref=1</a></th>
+            <th>Should return portfolio entry number 1</th>
+        <tr>
+            <th><a href="api/history.php?ref=ads">api/history.php?ref=ads</a></th>
+            <th>Should return history for ads</th>
+        </tr>
+        <tr>
+            <th><a href='api/users.php?ref=</th>
         </tr>
     </table>
     </body>

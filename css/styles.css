@@ -165,3 +165,59 @@ h1 {
 .financials tbody tr:hover {
     background: #eef4ff;
 }
+.about_content {
+    max-width: 700px;
+    width: 90%;               /* responsive width */
+    padding: 30px 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #d0d0e0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    line-height: 1.7;
+    
+    /* Center horizontally */
+    margin: 40px auto;  /* top/bottom 40px, left/right auto */
+}
+
+
+/* Heading in box */
+.about_content h2 {
+    color: #1f3c88;
+    font-size: 28px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.about_content h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Paragraph */
+.about_content p {
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* GitHub link */
+.about_content a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1f3c88;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.about_content a:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+}

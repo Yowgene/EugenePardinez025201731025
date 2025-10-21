@@ -1,5 +1,5 @@
 <?php
-
+//this is about php file, it contains information about me and the project. This page didnt use any phpcode other than the php tags
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,18 @@
             <h2><a href="about.php">About</a></h2>
             <h2><a href="apitest.php">APIs</a></h2>
         </div>
-    <h2>About</h2>
-    <p>I am Eugene Pardinez, this assignment is about using php and sqlite to create an interactive html. Im currently using XAMPP, VScode and db browser for the assignment.<a href="https://github.com/Yowgene/eugpar025201731025.git">https://github.com/Yowgene/eugpar025201731025.git</a></a></p>
+    <div class="about_content">
+        <h2>About</h2>
+            <p>I am Eugene Pardinez, this assignment is about using php and sqlite to create an interactive html. 
+                Im currently using XAMPP, VScode and db browser for the assignment.<br>
+                Description of each items used:<br>
+                XAMPP - local server to run php and sqlite<br>
+                VScode - code editor to edit php, html, css files<br>
+                DB Browser - to create and edit the sqlite database, also I used this to check the database contents<br>
+
+                <br>
+            </p>
+            <a href="https://github.com/Yowgene/eugpar025201731025.git">My GIThub Repository</a>
+    </div>
     </body>
 </html>
