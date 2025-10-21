@@ -3,6 +3,7 @@
         $pdo = new PDO('sqlite:../data/stocks.db'); //pdo connection on SQLite database
         $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $ref = $_GET['ref'] ?? null;//get the reference from the apitest.php, this will be used to search for symbol
+        $ref = strtoupper($ref); //convert the reference to uppercase to match the database entries
         if ($ref) { //if/else statement to check if there is a reference input
             $stmt = $pdo->prepare("SELECT * FROM companies WHERE symbol = :ref");//preparing the statement
             $stmt->execute([':ref' => $ref]); //using ref to execute the search

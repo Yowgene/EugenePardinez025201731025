@@ -3,6 +3,7 @@
         $pdo = new PDO('sqlite:../data/stocks.db'); //pdo connection on SQLite database
         $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $ref = $_GET['ref'] ?? null; //get the reference from the apitest.php, this will be used to search for symbol
+        $ref = strtoupper($ref); //convert the reference to uppercase to match the database entries
         if ($ref) {//if/else statement to check if there is a reference input
             $ref = ucwords($ref); //capitalize the first letter of each word to match the database entries
             $stmt = $pdo->prepare("SELECT * FROM history WHERE symbol = :ref");

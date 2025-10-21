@@ -1,6 +1,7 @@
 <?php
 //apitest.php, this should provide links to the different api files created
 //i'ved put it in a table for better visuals and structure
+//for AAP link, im not quite sure if I should return all symbols with AAP or just AAP alone, so I based it in just one AAP symbol since it says that it only retuns one specific company
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,7 @@
             <th><strong>Description</strong></th>
         </tr>
         <tr>
-            <th><a href='api/companies.php?ref=AAP'>api/companies.php?gref=AAP</a></th>
+            <th><a href='api/companies.php?ref=aap'>api/companies.php?ref=aap</a></th>
             <th>Should return AAP</th>
         </tr>
         <tr>
@@ -36,8 +37,8 @@
             <th><a href='api/portfolio.php?ref=1'>api/portfolio.php?ref=1</a></th>
             <th>Should return portfolio entry number 1</th>
         <tr>
-            <th><a href="api/history.php?ref=ads">api/history.php?ref=ads</a></th>
-            <th>Should return history for ads</th>
+            <th><a href="api/history.php?ref=aap">api/history.php?ref=aap</a></th>
+            <th>Should return history for aap</th>
         </tr>
         <tr>
             <th><a href='api/users.php?ref=</th>
