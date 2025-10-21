@@ -28,7 +28,7 @@
 
                 <br>
             </p>
-            <a href="https://github.com/Yowgene/eugpar025201731025.git">My GIThub Repository</a>
+            <a href="https://github.com/Yowgene/EugenePardinez025201731025.git">My GIThub Repository</a>
     </div>
     </body>
 </html>
